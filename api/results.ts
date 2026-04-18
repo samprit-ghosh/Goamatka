@@ -13,7 +13,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const results = await query;
       return res.status(200).json(results);
     } catch (error: any) {
-      return res.status(500).json({ error: error.message });
+      console.error('[GET Results] Error:', error);
+      return res.status(500).json({ error: error.message || 'Error fetching results' });
     }
   }
 
@@ -38,8 +39,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       console.log('[API] Result saved successfully');
       return res.status(200).json(result);
     } catch (error: any) {
-      console.error('[API] POST Error:', error);
-      return res.status(500).json({ error: error.message });
+      console.error('[POST Result] Error:', error);
+      return res.status(500).json({ error: error.message || 'Error updating result' });
     }
   }
   
