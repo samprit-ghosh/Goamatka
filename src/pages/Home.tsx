@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Marquee from '../components/Marquee';
-import { Calendar, Clock } from 'lucide-react';
+
 
 interface HomeProps {
    onOpenContact: () => void;
@@ -48,10 +48,7 @@ const Home: React.FC<HomeProps> = ({ onOpenContact }) => {
       }).toUpperCase();
    };
 
-   const getDayResult = (res: any) => {
-      if (!res) return null;
-      return res;
-   };
+
 
    return (
       <div className="bg-[#1b003a] min-h-screen text-white font-sans selection:bg-yellow-500 selection:text-black overflow-x-hidden">

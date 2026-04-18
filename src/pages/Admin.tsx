@@ -6,12 +6,8 @@ import {
   LayoutDashboard,
   Moon,
   Type,
-  LogOut,
-  Database,
   Edit2,
-  CheckCircle,
-  AlertTriangle,
-  ChevronRight
+  CheckCircle
 } from 'lucide-react';
 
 const Admin = () => {
